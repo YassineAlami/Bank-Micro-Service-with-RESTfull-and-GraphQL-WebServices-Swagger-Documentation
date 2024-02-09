@@ -90,7 +90,7 @@ displaying our customers, for each one we want to get their basic info + their l
 ![Screenshot (1676)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/a1534b2a-aeb8-49c9-9292-78f7c78fbb30)
 
 
-mean  while in REST land, the reason why we got this horror is because REST can t handle bidirectional relationships (poor Rest! RIP!)
+mean  while in REST land, the reason why we got this horror is because REST can t handle bidirectional relationships (poor Rest! Rest In Peace!)
 but there are actually some ways to deal with this kind of errors, maybe the best one is to use DTOs, use @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) which is basically saying that we don t care about displaying this attribute, we only want to write
 ![Screenshot (1677)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/a1fa0e04-42df-41ed-aebb-07ae7d7cd337)
 
