@@ -81,6 +81,38 @@ this way we ll be in a position to test bidirectional relationships between enti
 ![Screenshot (1674)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/22991cb8-78cc-4103-87c9-2446c1ffa16d)
 
 
+unlike Rest, GraphQL has no cyclic dependencies issues when asked to return data from an object that itself has data inside the first object.
+this count as one of the great pros of GraphQL
+![Screenshot (1675)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/13464c0b-a3b9-440c-967d-f9da0a515cd7)
 
 
+displaying our customers, for each one we want to get their basic info + their list of accounts (10 each)
+![Screenshot (1676)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/a1534b2a-aeb8-49c9-9292-78f7c78fbb30)
+
+
+mean  while in REST land, the reason why we got this horror is because REST can t handle bidirectional relationships (poor Rest! RIP!)
+but there are actually some ways to deal with this kind of errors, maybe the best one is to use DTOs
+second best (for me) is to use @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) which is basically saying that we don t care about displaying this attribute, we only want to write
+![Screenshot (1677)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/a1fa0e04-42df-41ed-aebb-07ae7d7cd337)
+
+
+here is how it looks after the use of "@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)" instruction 
+![Screenshot (1678)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/479f9b91-d89d-4488-a8a9-d7a56e7857f6)
+
+
+here is what we got in "Customers" after introcucing DTOs 
+![Screenshot (1679)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/c9a96717-c661-470d-ba98-dc029bfab93c)
+
+
+for obvious reasons.. it is best to get rid of tha data regarding the "customer" inside of the "bankAccounts"
+![Screenshot (1680)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/901eb11c-2dd4-4b01-97d5-44a08e5e2a9a)
+
+
+regarding the creation of new customers it is beneficial to keep the required items to a min level, here in our example only one attribute is needed, namely the name
+![Screenshot (1681)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/2f0734c3-429a-4cf7-92fe-655417227e46)
+
+
+to be able to delete a customer we have to go through deleting all his accounts first. 
+only after making sure all of his accounts are deleted, only then we can proceed with the elemination of the whole customer
+![Screenshot (1682)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/6654fe80-bdf5-427c-b2a2-5670709097f8)
 
