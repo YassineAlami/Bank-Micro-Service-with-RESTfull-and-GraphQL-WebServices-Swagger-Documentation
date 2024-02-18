@@ -1,8 +1,22 @@
 # Micro-Service-with-RESTfull-and-GraphQL-WebServices
 A Spring Boot project for Bank Accounts management, using Spring Web, Spring Data JPA, H2, and Lombok... The steps included creating a RESTful web service tested with Postman, Swagger documentation, RESTful API with Spring Data Rest, DTOs and Mappers and a GraphQL web service
+<hr>
+
+☑️ Create a Spring Boot project with Spring Web, Spring Data JPA, H2, and Lombok dependencies. <br>
+☑️ Create the JPA entity Account.<br>
+☑️ Create the CompteRepository interface based on Spring Data.<br>
+☑️ Test the DAO layer.<br>
+☑️ Create a Restful web service to manage accounts.<br>
+☑️ Test the micro-service using a REST client (Postman).<br>
+☑️ Generate and test the Swagger documentation for the Restful API of the web service.<br>
+☑️ Expose a Restful API using Spring Data Rest by leveraging projections.<br>
+☑️ Create DTOs and Mappers.<br>
+☑️ Create the Service layer for the micro-service.<br>
+☑️ Create a GraphQL web service for this micro-service. <br>
 
 
-
+<hr>
+Steps: <br><br><br>
 so the first entity of the Micro Service is 'BankAccount' 
 this is how it looks from the h2 console
 ![Screenshot (1655)](https://github.com/YassineAlami/Micro-Service-with-RESTfull-and-GraphQL-WebServices/assets/40896739/21dbf049-352b-4c8b-9474-833a69e4c694)
